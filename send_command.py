@@ -7,14 +7,14 @@ def send_download(url):
         data = {"cmd": f"download {url}"}
         response = requests.post(f"{SERVER}/command", json=data)
         if response.status_code == 200:
-            print(f"✅ 명령어 전송 성공: {url}")
+            print(f" 명령어 전송 성공: {url}")
         else:
-            print(f"❌ 명령어 전송 실패: {response.status_code}")
+            print(f" 명령어 전송 실패: {response.status_code}")
     except Exception as e:
-        print(f"❌ 오류: {e}")
+        print(f" 오류: {e}")
 
 def main():
-    print("🚀 원격 다운로드 명령어 전송기")
+    print(" 원격 다운로드 명령어 전송기")
     print("=" * 40)
     
     while True:
@@ -31,7 +31,7 @@ def main():
             url = cmd.split(" ", 1)[1]
             send_download(url)
         else:
-            print("❌ 잘못된 명령어입니다.")
+            print(" 잘못된 명령어입니다.")
 
 # 사용 예시
 if __name__ == "__main__":
