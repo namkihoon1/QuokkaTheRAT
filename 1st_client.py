@@ -3,7 +3,7 @@ import subprocess
 import os
 import time
 
-SERVER = "http://192.168.0.2:5000"  # 외부 IP 주소로 변경하세요
+SERVER = "http://<서버IP주소>:5000"  
 
 def download_file(url, filename):
     try:
