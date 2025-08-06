@@ -1,7 +1,7 @@
 import requests
 import json
 
-SERVER = "http://YOUR_EXTERNAL_IP:5000"  # 외부 IP 주소로 변경하세요
+SERVER = "http://<서버 IP주소>:5000"
 
 def test_connection():
     try:
@@ -60,3 +60,4 @@ if __name__ == "__main__":
         # send_download_command("http://example.com/steam_game.exe")
     else:
         print("서버에 연결할 수 없습니다. 서버가 실행 중인지 확인하세요.") 
+
